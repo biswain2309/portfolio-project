@@ -7,9 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Indrani Biswas
-    </title>
-
+    <title>Work</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -33,13 +31,6 @@
         border-radius: 5px;
         padding: 0;
         border: none;
-        background-color: #e6e6e6;
-      }
-      .pic {
-      width:300px;
-      padding:5px;
-      border:3px solid #1c87c9;
-      background-color: #e6e6e6;
       }
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -86,31 +77,11 @@
 
 <main role="main">
 
-<header>
-  <h2><br></></h2>
-<body style="background-color:powderblue;">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-8">
-        <h1>Hi, I'm Indrani.</h1>
-      <p class="lead text-muted">Hey, my name is Indrani Biswas and I love to make Django websites. I am trying to learn new technologies to withstand the new era of techboomb! <br/> To get in touch with me, please</p>
-      <p>
-        <a href="mailto:ibiswas.2309@gmail.com" class="btn btn-primary my-2">Email Me</a>
-      </p>
-      </div>
-      <div class="col-8 col-md-4">
-        <img class="pic" src="{% static 'IMG_20180530_165410__01__01.jpg' %}"/>
-      </div>
-    </div>
-  </div>
-</body>
-
-
-  <div class="album py-5 bg-light">
+<div class="album py-5 bg-light">
     <div class="container">
 
       <div class="row">
-        {% for work in (select * from works.all order by work limit 3) %}
+        {% for work in works.all %}
         <div class="col-md-4">
             <h3>{{ work.title }}</h3>
           <div class="card mb-4 shadow-sm">
@@ -121,7 +92,7 @@
             </div>
           </div>
         </div>
-        {% endfor %}
+        {% endfor %} 
     </div>
   </div>
 

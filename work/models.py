@@ -1,10 +1,10 @@
 from django.db import models
 
-class Blog(models.Model):
+class Work(models.Model):
     title = models.CharField(max_length=200)
-    pub_date = models.DateTimeField()
     body = models.TextField()
     image = models.ImageField(upload_to='images/')
+    url = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -12,5 +12,5 @@ class Blog(models.Model):
     def summary(self):
         return self.body[:100]
 
-    def pub_date_pretty(self):
-        return self.pub_date.strftime('%b %e %Y')
+    def urls(self):
+        return self.url
