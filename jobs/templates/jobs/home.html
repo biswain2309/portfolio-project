@@ -38,7 +38,8 @@
       .pic {
       width:300px;
       padding:5px;
-      border:3px solid #1c87c9;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px #888;
       background-color: #e6e6e6;
       }
       .bd-placeholder-img {
@@ -92,14 +93,11 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-8">
-        <h1>Hi, I'm Indrani.</h1>
-      <p class="lead text-muted">Hey, my name is Indrani Biswas and I love to make Django websites. I am trying to learn new technologies to withstand the new era of techboomb! <br/> To get in touch with me, please</p>
-      <p>
-        <a href="mailto:ibiswas.2309@gmail.com" class="btn btn-primary my-2">Email Me</a>
-      </p>
+        <h1>Myself Indrani!</h1>
+      <p class="lead text-muted">Total 5 years of experience in Mainframe technologies which includes 2 years of legacy migration and process automation. Learned and applied python technologies while tagged in a full-time project. Self-taught techie with go and getter attitude to achieve results in an Agile model. An Open source contributor and lifetime learner who is ready to skill up proactively as per organization requirements. Always wants to work with a firm which helps in the growth of an individual. </p>
       </div>
       <div class="col-8 col-md-4">
-        <img class="pic" src="{% static 'IMG_20180530_165410__01__01.jpg' %}"/>
+          <img class="pic" alt='image' src="{% static 'IMG_20180530_165410__01__01.jpg' %}"/>
       </div>
     </div>
   </div>
@@ -108,9 +106,10 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
-
+      <h1>Top three projects</h1>
+      <hr></hr>
       <div class="row">
-        {% for work in (select * from works.all order by work limit 3) %}
+        {% for work in works.all %}
         <div class="col-md-4">
             <h3>{{ work.title }}</h3>
           <div class="card mb-4 shadow-sm">
@@ -124,6 +123,26 @@
         {% endfor %}
     </div>
   </div>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <h1>Achievements</h1>
+      <hr></hr>
+      <div class="row">
+        {% for achv in achvs.all %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="{{ achv.image.url }}" />
+            <div class="card-body">
+              <p class="card-text">{{ achv.body }}</p></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+
 
 </main>
 

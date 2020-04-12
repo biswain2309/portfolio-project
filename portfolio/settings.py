@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'achievements.apps.AchievementsConfig',
     'contact.apps.ContactConfig',
     'work.apps.WorkConfig',
     'blog.apps.BlogConfig',
