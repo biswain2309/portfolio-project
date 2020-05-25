@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'achievements.apps.AchievementsConfig',
     'contact.apps.ContactConfig',
     'work.apps.WorkConfig',
-    'blog.apps.BlogConfig',
     'jobs.apps.JobsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
