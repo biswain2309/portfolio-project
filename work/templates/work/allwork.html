@@ -35,6 +35,14 @@
       border: none;
     }
 
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+
     .bd-placeholder-img {
       font-size: 1.125rem;
       text-anchor: middle;
@@ -42,6 +50,15 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: uto;
+      margin-left: auto;
+      background-color: lightgrey;
     }
 
     @media (min-width: 768px) {
@@ -54,17 +71,17 @@
   <link href="album.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: #343b40">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="{% url 'home' %}">Indrani Biswas</a>
       <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-          <a href="https://dev.to/biswain2309" class="navbar-link" target="_blank">
+        <!-- <ul class="navbar-nav mr-auto">
+          <a href="" class="navbar-link" target="_blank">
             <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" class="logo"
               alt="Indrani Biswas's DEV Profile" height="40" width="40">
           </a>
-        </ul>
+        </ul> -->
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,10 +89,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
           <a class="nav-item nav-link" target="_blank" href="{% url 'allwork' %}">Work</a>
-          <!-- <a class="nav-item nav-link" target="_blank" href="">Github</a> -->
           <a class="nav-item nav-link" href="{% url 'allcontact' %}">Contact</a>
-          <!-- <a class="nav-item nav-link" href="">Blog</a> -->
+          <a class="nav-item nav-link" target="_blank" href="http://articlyzer-project.herokuapp.com/">Articlyzer</a>
         </div>
       </div>
     </nav>
@@ -117,9 +134,7 @@
           </tbody>
         </table>
       </div>
-    </div>
 
-    <div class="container mt-4">
       <div class="col">
         <h3>Showcase</h3>
         <hr>
@@ -146,10 +161,11 @@
   </main>
 
   <footer class="text-muted">
-    <div class="container text-center">
+    <div class="footer">
       <p>© Indrani Biswas {% now "Y" %}</p>
     </div>
   </footer>
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
