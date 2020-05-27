@@ -1,108 +1,190 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    {% load staticfiles %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
-    <title>Indrani Biswas</title>
+
+<head>
+  {% load staticfiles %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.6">
+  <title>Indrani Biswas</title>
 
 
-    <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+  <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#563d7c">
+  <script src="https://kit.fontawesome.com/1725ac8448.js" crossorigin="anonymous"></script>
 
 
-    <style>
+  <style>
     .logo {
-        width: 40px;
-        border-radius: 5px;
-        padding: 0;
-        border: none;
-        background-color: #e6e6e6;
-      }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
+      width: 40px;
+      border-radius: 5px;
+      padding: 0;
+      border: none;
+      background-color: #e6e6e6;
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: lightgrey;
+    }
+
+    .content {
+      flex-grow: 1;
+    }
+
+    #id_name {
+      width: 100%;
+    }
+
+    #id_message {
+      width: 100%;
+    }
+
+    #id_email {
+      width: 100%;
+    }
+
+    .hr-line {
+      border-bottom: 1px, solid #d3d3d3;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding-top: 1rem;
+      color: white;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="{% url 'home' %}">Indrani Biswas</a>
-          <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-              <a href="https://dev.to/biswain2309" class="navbar-link" target="_blank">
-                <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" class="logo" alt="Indrani Biswas's DEV Profile" height="40" width="40">
-              </a>
-            </ul>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link" target="_blank" href="{% url 'allwork' %}">Work</a>
-              <a class="nav-item nav-link" target="_blank" href="https://github.com/biswain2309">Github</a>
-              <a class="nav-item nav-link" href="{% url 'allcontact' %}">Contact</a>
-              <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
-            </div>
-          </div>
-        </nav>
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="album.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #343b40">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'home' %}">Indrani Biswas</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+          <a class="nav-item nav-link" href="{% url 'allwork' %}">Work</a>
+          <a class="nav-item nav-link" href="{% url 'allcontact' %}">Contact</a>
+          <a class="nav-item nav-link" target="_blank" href="http://articlyzer-project.herokuapp.com/">Articlyzer</a>
+        </div>
+      </div>
+    </nav>
   </header>
 
 
-<main role="main">
-    <h1 class="text-center pt-3">Contact Me</h1>
-    <br />
-    <div class="album py-5 bg-light">
-        <div class="container">
-          <div class="row">
-            {% for contact in contacts.all %}
-            <div class="col-md-3 p-3">
-              <div class="card m-5 shadow-sm">
-                <img class="card-img-top" src="{{ contact.image.url }}" width=5 height=200 />
-                <a class="nav-item nav-link" target="_blank" href={{ contact.urls }}></a>
-                <a class="all"> href={{ contact.dtl }}</a>
-            </div>   
+  <main role="main" class="pt-3">
+    <div class="container mt-4">
+      <div class="row hr-line pt-3">
+        <div class="col">
+          <h3>Contact Info</h3>
+          <hr>
+          </hr>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <section class="col-4 text-center">
+          <h5 class="text-muted">Address</h5>
+          <p class="text-muted">Pune, India 411057</p>
+        </section>
+        <section class="col-4 text-center">
+          <h5 class="text-muted">Phone</h5>
+          <p class="text-muted">9600091827</p>
+        </section>
+        <section class="col-4 text-center">
+          <h5 class="text-muted">Skype ID</h5>
+          <p class="text-muted">indrani.biswas23</p>
+        </section>
+      </div>
+      <section class="row">
+        <article class="col">
+          <h3>Connect with me!</h3>
+          <hr />
+        </article>
+      </section>
+      <div class="row w-75 m-auto">
+        <div class="col">
+          <form action="" method="POST">
+            {% csrf_token %}
+
+            {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+            <div class="form-group">
+              {{ field.errors }}
+              <label>{{ field.label_tag }}</label>
+              <p>{{ field }}</p>
             </div>
-            {% endfor %} 
+            {% endfor %}
+            {% if not submitted %}
+            <button type="reset" class="btn btn-secondary mb-2">Reset</button>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            {% endif %}
+          </form>
+          {% if submitted %}
+          <div class="alert alert-success mt-5 mb-5" role="alert">
+            Thank you for your message. I will be in touch shortly!
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>
-</main>
+    <footer class="footer">
+      <p>© Indrani Biswas {% now "Y" %}</p>
+    </footer>
+  </main>
 
-<footer class="text-muted">
-  <div class="container text-center">
-    <p>© Indrani Biswas {% now "Y" %}</p>
-  </div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></body>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

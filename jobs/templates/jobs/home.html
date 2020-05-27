@@ -96,12 +96,12 @@
     }
 
     .footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
+      margin-top: 3rem;
       text-align: center;
+      padding-top: 1rem;
+      color: white;
     }
+
 
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
@@ -140,14 +140,11 @@
     </nav>
   </header>
 
-  <main role="main">
-
+  <main role="main" class="pt-3">
     <header>
-      <h2></br>
-      </h2>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-8 mt-0">
+      <div class="container mt-4">
+        <div class="row pt-3">
+          <div class="col-12 col-md-8">
             <h2>Hi,</h2>
             <p class="text-muted text-justify mb-5">Total 5 years of experience in Mainframe technologies which
               includes 2 years of
@@ -172,7 +169,7 @@
               {% for work in works.all %}
               <li class="repo">
                 <section class="row">
-                  <article class="column">
+                  <article class="col">
                     <a href={{ work.urls }} target="_blank" rel="noopener noreferrer">{{ work.title }}</a>
                   </article>
                 </section>
@@ -190,21 +187,21 @@
             <ol class="repos">
               <li class="repo">
                 <section class="row">
-                  <article class="column">
+                  <article class="col">
                     <p>Udemy Certificate</p>
                   </article>
                 </section>
               </li>
               <li class="repo">
                 <section class="row">
-                  <article class="column">
+                  <article class="col">
                     <p>Machine Learning Certificate</p>
                   </article>
                 </section>
               </li>
               <li class="repo">
                 <section class="row">
-                  <article class="column">
+                  <article class="col">
                     <p>Infosys Certified Python Developer</p>
                   </article>
                 </section>
@@ -214,13 +211,12 @@
         </div>
       </div>
     </header>
+    <footer class="footer">
+      <p>© Indrani Biswas {% now "Y" %}</p>
+    </footer>
   </main>
 
-  <footer class="text-muted">
-    <div class="footer">
-      <p>© Indrani Biswas {% now "Y" %}</p>
-    </div>
-  </footer>
+
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
