@@ -61,6 +61,47 @@
       background-color: lightgrey;
     }
 
+    .about-button {
+      vertical-align: top;
+      height: auto;
+      width: auto;
+      font-size: 1rem;
+      border: 2px solid #fff;
+      color: #fff;
+      border-radius: 10px;
+      padding: 5px;
+      background: black !important;
+    }
+
+    .btn-primary.custom-btn {
+      background-color: #e4731b;
+      border-color: white;
+    }
+
+    .btn-primary.box-shadow--8dp {
+      box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 1px 5px rgb(226, 224, 219);
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #e4731b;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e4731b;
+    }
+
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
@@ -98,57 +139,61 @@
     </nav>
   </header>
 
-  <main role="main" class="pt-3">
-
-    <div class="container mt-4">
+  <main role="main">
+    <div class="container p-3">
       <div class="row pt-3">
         <div class="col">
-          <h3>Portfolio</h3>
-          <hr>
-          </hr>
-          <table class="table table-striped">
-            <tbody>
-              <tr>
-                <td>Programming Languages</td>
-                <td>
-                  <pre>Python, HTML, SQL</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>Frameworks and Libraries</td>
-                <td>
-                  <pre>Pandas, Numpy, NLP, Django, RestFramework, CSS, Bootstrap, Matplotlib</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>Database and Servers</td>
-                <td>
-                  <pre>PostgreSQL, MySQL, gunicorn</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>Platform and Tools</td>
-                <td>
-                  <pre>git, Heroku, VS Code, jupyter</pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <h3>Portfolio
+            <a rel="noopener noreferrer" target="_blank" href="{% static 'Indrani_2805.pdf' %}">
+              <span class="btn btn-primary custom-btn box-shadow--8dp">Resume</span>
+            </a>
+          </h3>
         </div>
       </div>
-
-      <div class="col">
-        <h3>Showcase</h3>
-        <hr>
-        </hr>
-        <div class="font-weight-normal mb-3">Some of my personal work below</div>
+      <hr>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Programming Languages</td>
+              <td>
+                <pre>Python, HTML, SQL</pre>
+              </td>
+            </tr>
+            <tr>
+              <td>Frameworks and Libraries</td>
+              <td>
+                <pre>Pandas, Numpy, NLP, Django, RestFramework, CSS, Bootstrap, Matplotlib</pre>
+              </td>
+            </tr>
+            <tr>
+              <td>Database and Servers</td>
+              <td>
+                <pre>PostgreSQL, MySQL, gunicorn</pre>
+              </td>
+            </tr>
+            <tr>
+              <td>Platform and Tools</td>
+              <td>
+                <pre>git, Heroku, VS Code, jupyter</pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div style="overflow: auto; height:200px;">
+      <div class="row">
+        <div class="col">
+          <h3>Showcase</h3>
+          <hr>
+          <div class="font-weight-normal mb-3">Some of my personal work below</div>
+        </div>
+      </div>
+      <div style="overflow-y: visible; overflow-x: hidden; height:200px;">
         {% for work in works.all %}
         <div class="row">
           <div class="col">
             <h5>
-              <a class="nav-item nav-link pb-0" target="_blank" href={{ work.urls }}>{{ work.title }}</a>
+              <a class="pb-0" target="_blank" href={{ work.urls }} style="color:#e4731b">{{ work.title }}</a>
             </h5>
             <small class="text-muted pl-3">{{ work.tech }}</small>
             <p class="text-justify pl-3">{{ work.summary }}</p>

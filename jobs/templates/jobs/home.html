@@ -47,7 +47,8 @@
     }
 
     .homepagepic {
-      border: 5px solid grey;
+      /* border: 5px solid #007bff; */
+      border: 5px solid #e4731b;
       width: 55%;
       border-radius: 50%;
       text-align: center;
@@ -75,11 +76,13 @@
       list-style-type: none;
       display: flex;
       padding: 0;
+      height: 100%;
     }
 
     .repo {
       margin: 1rem 0;
       margin-right: 10px;
+      min-height: 100%;
     }
 
     .repo a {
@@ -102,6 +105,25 @@
       color: white;
     }
 
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 1px 5px rgb(226, 224, 219);
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #e4731b;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e4731b;
+    }
 
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
@@ -140,77 +162,69 @@
     </nav>
   </header>
 
-  <main role="main" class="pt-3">
-    <header>
-      <div class="container mt-4">
-        <div class="row pt-3">
-          <div class="col-12 col-md-8">
-            <h2>Hi,</h2>
-            <p class="text-muted text-justify mb-5">Total 5 years of experience in Mainframe technologies which
-              includes 2 years of
-              legacy migration and process automation. Learned and applied python technologies while tagged in a
-              full-time project. Self-taught techie with go and getter attitude to achieve results in an Agile model.
-              An Open source contributor and lifetime learner who is ready to skill up proactively as per organization
-              requirements. Always wants to work with a firm which helps in the growth of an individual. </p>
-          </div>
-          <div class="col-md-4">
-            <img class="homepagepic mt-2" alt='image' src="{% static 'indu.jpg' %}" />
-            <p class="mt-3 text-muted">Python | Django | Web Developer</p>
-          </div>
+  <main role="main">
+    <div class="container p-3">
+      <div class="row pt-3">
+        <div class="col-12 col-md-8">
+          <h2>Hi,</h2>
+          <p class="text-muted text-justify mb-5">Total 5 years of experience in Mainframe technologies which
+            includes 2 years of
+            legacy migration and process automation. Learned and applied python technologies while tagged in a
+            full-time project. Self-taught techie with go and getter attitude to achieve results in an Agile model.
+            An Open source contributor and lifetime learner who is ready to skill up proactively as per organization
+            requirements. Always wants to work with a firm which helps in the growth of an individual. </p>
         </div>
-
-
-        <h3>Recent works</h3>
-        <hr>
-        </hr>
-        <div class="row">
-          <div class="col-sm-12">
-            <ol class="repos">
-              {% for work in works.all %}
-              <li class="repo">
-                <section class="row">
-                  <article class="col">
-                    <a href={{ work.urls }} target="_blank" rel="noopener noreferrer">{{ work.title }}</a>
-                  </article>
-                </section>
-              </li>
-              {% endfor %}
-            </ol>
-          </div>
-        </div>
-
-        <h3>Achievements</h3>
-        <hr>
-        </hr>
-        <div class="row">
-          <div class="col-sm-12">
-            <ol class="repos">
-              <li class="repo">
-                <section class="row">
-                  <article class="col">
-                    <p>Udemy Certificate</p>
-                  </article>
-                </section>
-              </li>
-              <li class="repo">
-                <section class="row">
-                  <article class="col">
-                    <p>Machine Learning Certificate</p>
-                  </article>
-                </section>
-              </li>
-              <li class="repo">
-                <section class="row">
-                  <article class="col">
-                    <p>Infosys Certified Python Developer</p>
-                  </article>
-                </section>
-              </li>
-            </ol>
-          </div>
+        <div class="col-md-4">
+          <img class="homepagepic mt-2" alt='image' src="{% static 'indu.jpg' %}" />
+          <p class="mt-3 text-muted">Python | Django | Web Developer</p>
         </div>
       </div>
-    </header>
+
+
+      <h3>Recent works</h3>
+      <hr>
+      </hr>
+      <div class="row">
+        <div class="col-sm-12">
+          <ol class="repos">
+            {% for work in works.all %}
+            <li class="repo">
+              <section class="row">
+                <article class="col">
+                  <a href={{ work.urls }} target="_blank" rel="noopener noreferrer">{{ work.title }}</a>
+                </article>
+              </section>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+
+      <h3>Achievements</h3>
+      <hr>
+      </hr>
+      <div class="row">
+        <div class="col-sm-12">
+          <ol class="repos">
+            {% for achvs in achvs.all %}
+            <li class="repo">
+              <section class="row">
+                <article class="col">
+                  <a>
+                    <h5>{{ achvs.title }}
+                      <h6 class="text-muted">{{ achvs.body }} |
+                        <small>{{ achvs.credential_id }}</small> |
+                        <small>{{ achvs.completion_date }}</small></h6>
+                    </h5>
+                  </a>
+                </article>
+              </section>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <p>© Indrani Biswas {% now "Y" %}</p>
     </footer>
