@@ -39,7 +39,7 @@ def get_env_variable(var_name):
 
 ENV_ROLE = get_env_variable('ENV_ROLE')
 
-DEBUG = True
+DEBUG = False
 if ENV_ROLE == 'development':
     DEBUG = True
 
