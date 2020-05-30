@@ -167,6 +167,7 @@ if ENV_ROLE == 'development':
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
     print('*********1',os.environ.get('EMAIL_HOST_USER'))
     print('********2',os.environ.get('EMAIL_HOST_PASSWORD'))
+    print('********2',os.environ.get('SECRET_KEY'))
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
