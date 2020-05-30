@@ -39,7 +39,7 @@ def get_env_variable(var_name):
 
 ENV_ROLE = get_env_variable('ENV_ROLE')
 
-DEBUG = True
+DEBUG = False
 if ENV_ROLE == 'development':
     DEBUG = True
 
@@ -162,12 +162,12 @@ MEDIA_URL = '/media/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-if ENV_ROLE == 'development':
-    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-    print('*********1',os.environ.get('EMAIL_HOST_USER'))
-    print('********2',os.environ.get('EMAIL_HOST_PASSWORD'))
-    print('********2',os.environ.get('SECRET_KEY'))
+# if ENV_ROLE == 'development':
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+print('*********1',os.environ.get('EMAIL_HOST_USER'))
+print('********2',os.environ.get('EMAIL_HOST_PASSWORD'))
+print('********2',os.environ.get('SECRET_KEY'))
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
